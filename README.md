@@ -1,8 +1,7 @@
 # Linux Command Complete Group Study
 ![Linux Command Guide](Images/linux01.jpg)
-# Group Study Roles
-## 📖 Overview
 
+## 📖 Overview
 
 A comprehensive guide to essential Linux commands, organized by category for easy learning and reference. Ideal for beginners, system administrators, and DevOps engineers.
 
