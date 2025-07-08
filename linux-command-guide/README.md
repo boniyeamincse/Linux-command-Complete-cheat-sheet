@@ -1,3 +1,6 @@
+# Linux Command Complete Group Study
+![Linux Command Guide](Images/linux01.jpg)
+
 # Linux Command Complete Cheat Sheet
 
 A comprehensive guide to essential Linux commands, organized by category for easy learning and reference. Ideal for beginners, system administrators, and DevOps engineers.
