@@ -27,6 +27,7 @@ Linux supports a variety of file systems, each designed for specific needs:
 
 ## Linux Directory Structure
 ![Linux Directory Structure](images/l3.jpg)
+
 Directories (folders) are containers for files and other directories, providing a hierarchical structure starting at the root directory `/`. This structure helps organize files logically, making them easier to locate and manage.
 
 The Linux directory structure includes:
@@ -101,6 +102,175 @@ The Linux directory structure includes:
 | truncate  | Shrink or extend the size of a file                 | `truncate -s 0 file.txt`             |
 | mktemp    | Create a temporary file or directory                | `mktemp`                             |
 | dd        | Convert and copy a file                             | `dd if=input.img of=output.img bs=4M` |
+
+---
+
+# Linux File and Directory Commands
+
+Below are some of the most commonly used file and directory commands in Linux, along with their descriptions, syntax, and examples.
+
+---
+
+## pwd
+
+**Description:**  
+The `pwd` (Present Working Directory) command prints the full path of the current working directory.
+
+**Example:**
+```bash
+$ pwd
+/home/sj/Desktop/Linux
+```
+
+---
+
+## ls
+
+**Description:**  
+The `ls` command lists files and directories. It supports various options to change the output format.
+
+**Syntax:**  
+`ls [options] [directory]`
+
+**Examples:**
+```bash
+$ ls
+bin  dev  lib  libx32  mnt
+
+# Listing files & directories with time in reverse order
+$ ls -ltr
+drwxr-xr-x 2 sj sj 4096 May 14  2020 Videos
+drwxr-xr-x 2 sj sj 4096 May 14  2020 Templates
+
+# Home directory
+$ ls ~
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+```
+
+**Common Options:**
+- `-a` : Show all (including hidden)
+- `-R` : Recursive list
+- `-r` : Reverse order
+- `-t` : Sort by last modified
+- `-S` : Sort by file size
+- `-l` : Long listing format
+- `-1` : One file per line
+- `-m` : Comma-separated output
+- `-Q` : Quoted output
+
+---
+
+## mkdir
+
+**Description:**  
+The `mkdir` (make directory) command creates directories.
+
+**Examples:**
+```bash
+$ mkdir ubuntu
+$ ls
+ubuntu
+
+# Create multiple directories/parent directories at once
+$ mkdir -p dir1/dir2/dir3
+$ cd dir1/dir2/dir3
+```
+
+---
+
+## rmdir
+
+**Description:**  
+The `rmdir` (remove directory) command removes empty directories.
+
+**Examples:**
+```bash
+# Remove empty directory
+$ rmdir FolderName
+
+# Remove multiple directories
+$ rmdir FolderName1 FolderName2 FolderName3
+
+# Ignore non-empty directories
+$ rmdir FolderName1 --ignore-fail-on-non-empty
+
+# Remove entire directory tree
+$ rmdir -p a/b/c
+```
+
+---
+
+## rm
+
+**Description:**  
+The `rm` (remove) command deletes files and directories.
+
+**Examples:**
+```bash
+# Remove file
+$ rm file_name
+
+# Remove file forcefully
+$ rm -f filename
+
+# Remove directory and its contents recursively
+$ rm -r myDir
+
+# Remove directory forcefully and recursively
+$ rm -rf myDir
+```
+
+---
+
+## touch
+
+**Description:**  
+The `touch` command creates empty files or updates the timestamp of existing files.
+
+**Examples:**
+```bash
+# Create a new file
+$ touch file_name
+
+# Create multiple files
+$ touch file1 file2 file3
+
+# Change access time
+$ touch -a file_name
+
+# Change modification time
+$ touch -m file_name
+
+# Use timestamp of another file
+$ touch -r file2 file1
+
+# Create file with specific time
+$ touch -t 1911010000 file_name
+```
+
+---
+
+## cat
+
+**Description:**  
+The `cat` command is used to create files, view file contents, concatenate files, and redirect output.
+
+**Examples:**
+```bash
+# Create a file (press Ctrl+D to save and exit)
+$ cat > file_name1.txt
+Hello, How are you?
+
+# View file contents
+$ cat file_name1.txt
+
+# View multiple files
+$ cat file1 file2
+
+# View with more/less for large files
+$ cat file_name1.txt | more
+$ cat file_name1.txt | less
+```
 
 ---
 
